@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables.scss";
+@import "./normalize";
+
+body {
+  // <uniquifier>: Use a uniquifier for the class name
+  // <weight>: Use a value from 100 to 900
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// img {
+//   display: block;
+// }
+
+@media screen and (max-width: ($mobile - 1px)) {
+  .container {
+    max-width: 319px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    min-width: $mobile;
+    margin: 0 auto;
+    padding: 0 16px 0 16px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    min-width: $tablet;
+    margin: 0 auto;
+    padding: 0 30px 0 30px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    min-width: $desktop;
+    margin: 0 auto;
+    padding: 0 80px 0 80px;
+  }
+}
