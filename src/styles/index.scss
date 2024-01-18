@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind components;
+// @tailwind components;
 @tailwind utilities;
 
 @import "./variables.scss";
@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  background-color: $dark-white;
 }
 
 ul {

@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss";
+
+.section {
+  position: relative;
+  background-color: $full-pink;
+  color: $light-black;
+
+  padding: 16px 0 16px 0;
+}
+.QuestionMarkMob {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  z-index: 1;
+}
+
+.g_header,
+.header,
+.text {
+  position: relative;
+  z-index: 2;
+}
+.g_header {
+  margin-bottom: 16px;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+// .wrapper_lists {
+// }
+.first_list {
+  margin-bottom: 16px;
+}
+.first_list_item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.header {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+.text {
+  font-size: 16px;
+}
+// .last_list {
+// }
+.last_list_item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+// @media screen and (max-width: ) {
+// }
+
+@media screen and (min-width: $tablet) {
+  .section {
+    padding: 20px 0 20px 0;
+  }
+
+  .QuestionMarkMob {
+    top: 0;
+    right: 0;
+
+    width: 226px;
+
+    height: 100%;
+  }
+
+  .g_header {
+    font-size: 28px;
+  }
+
+  .first_list {
+    margin-bottom: 12px;
+  }
+  .first_list_item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  .header {
+    font-size: 24px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .last_list_item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .section {
+    padding: 32px 0 32px 0;
+  }
+
+  .QuestionMarkMob {
+    top: 0;
+    left: -50px;
+    width: 100%;
+    height: 100%;
+  }
+  .g_header {
+    margin-bottom: 20px;
+
+    font-size: 48px;
+  }
+  .wrapper_lists {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 149px;
+    padding-right: 149px;
+  }
+  .first_list {
+    margin-bottom: 0;
+    max-width: 571px;
+    // margin-right: 321px;
+  }
+  .first_list_item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  .header {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .last_list {
+    max-width: 571px;
+  }
+  .last_list_item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
