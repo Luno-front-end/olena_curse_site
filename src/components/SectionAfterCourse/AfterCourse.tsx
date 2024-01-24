@@ -2,9 +2,10 @@ import React, { FC } from "react";
 
 import s from "./afterCourse.module.scss";
 
-// import { ReactComponent as QuestionMarkMob } from "../../img/question_mark_mob.svg";
-// import { ReactComponent as QuestionMarkDesk } from "../../img/question_mark_desk.svg";
-// import { useViewportSizeDetection } from "../../hooks/useViewportSizeDetection";
+import imgOlena from "../../img/olena_mob.png";
+import { ReactComponent as OlenaName } from "../../img/olena_name_mob.svg";
+import { ReactComponent as OlenaNameDesk } from "../../img/olena_name_desk.svg";
+import { useViewportSizeDetection } from "../../hooks/useViewportSizeDetection";
 
 const dataSection = [
   {
@@ -31,29 +32,33 @@ const dataSection = [
 ];
 
 export const AfterCourse: FC = () => {
-  // const { viewportSize } = useViewportSizeDetection();
+  const { viewportSize } = useViewportSizeDetection();
 
-  // console.log(viewportSize);
   return (
     <section className={s.section}>
       <div className="container">
         <h2 className={s.g_header}>Після курсу</h2>
-        <div className={s.wrapper_lists}>
-          <img src="" alt="" />
-          <ul className={s.last_list}>
-            {dataSection.map((item, i) => (
-              <li key={i} className={s.last_list_item}>
-                <p className={s.text}>{item.text}</p>
-              </li>
-            ))}
-          </ul>
+        <div className={s.wrapper_content}>
+          <div className={s.wrapper_img}>
+            <div className={s.gradient_overlay}></div>
+            <img src={imgOlena} alt="Олена" className={s.img_olena} />
+            {viewportSize.width < 1280 ? (
+              <OlenaName className={s.olenaName_svg} />
+            ) : (
+              <OlenaNameDesk className={s.olenaName_svg} />
+            )}
+          </div>
+          <div className={s.wrapper_lists}>
+            <ul className={s.list}>
+              {dataSection.map((item, i) => (
+                <li key={i} className={s.list_item}>
+                  <p className={s.text}>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-      {/* {viewportSize.width < 1280 ? (
-        <QuestionMarkMob className={s.QuestionMarkMob} />
-      ) : (
-        <QuestionMarkDesk className={s.QuestionMarkMob} />
-      )} */}
     </section>
   );
 };

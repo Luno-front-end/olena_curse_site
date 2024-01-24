@@ -6,6 +6,7 @@
   color: $light-black;
 
   padding: 16px 0 16px 0;
+  margin-bottom: 40px;
 }
 .QuestionMarkMob {
   position: absolute;
@@ -13,14 +14,14 @@
   right: 0;
 
   height: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 .g_header,
 .header,
 .text {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .g_header {
   margin-bottom: 16px;
@@ -125,7 +126,8 @@
   }
   .first_list {
     margin-bottom: 0;
-    max-width: 571px;
+    max-width: 50%;
+    padding-right: 170px;
     // margin-right: 321px;
   }
   .first_list_item {
@@ -142,7 +144,8 @@
     font-size: 16px;
   }
   .last_list {
-    max-width: 571px;
+    max-width: 50%;
+    padding-left: 170px;
   }
   .last_list_item {
     &:not(:last-child) {

@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.link_sale {
+  display: inline-block;
+  color: $light-white;
+  border-radius: 30px;
+  opacity: 0.95;
+  border: 3px solid $light-white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: ($tablet - 1)) {
+  .link_sale {
+    margin-bottom: 20px;
+    padding: 20px 63px 20px 63px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .link_sale {
+    margin-bottom: 20px;
+    padding: 20px 60px 20px 60px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .link_sale {
+    margin-bottom: 119px;
+    padding: 20px 60px 20px 60px;
+    font-size: 20px;
+
+    border: 5px solid var(--logo-white, #fdfdfe);
+  }
+}

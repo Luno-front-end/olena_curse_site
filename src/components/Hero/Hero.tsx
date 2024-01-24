@@ -1,8 +1,8 @@
 import React from "react";
-import { Header } from "../Header/Header";
 import cn from "classnames";
 
 import s from "./hero.module.scss";
+import { CustomLink } from "../CustonLink/CustomLink";
 
 export const Hero = () => {
   return (
@@ -24,9 +24,10 @@ export const Hero = () => {
           </div>{" "}
         </div>
         <div className={s.wrapper_bonus}>
-          <a href="#id" className={s.link_sale}>
+          <CustomLink customClass={s.link_sale} id="id">
             хочу знижку 61%
-          </a>
+          </CustomLink>
+
           <div>
             <p className={s.bonus}>
               Після реєстрації ви отримаєте бонус : ТОП-50 сервісів для реклами.

@@ -1,6 +1,254 @@
 @import "../../styles/variables.scss";
+.section {
+  position: relative;
+  display: flex;
+  color: $light-black;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.g_header {
+  margin-bottom: 16px;
+
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.wrapper_img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  height: 292px;
+}
+
+.gradient_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(255, 211, 242, 0.7) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+  pointer-events: none;
+}
+.img_olena {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: 0 40%;
+  z-index: 1;
+}
+.olenaName_svg {
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.wrapper_lists {
+  padding-top: 320px;
+}
+
+.list {
+  list-style: disc;
+  margin-left: 16px;
+}
+.list_item {
+  &::marker {
+    font-size: 11px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 510px) {
+  .img_olena {
+    object-position: 0 35%;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .img_olena {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media screen and (min-width: $tablet) {
+  .section {
+    position: static;
+    margin-bottom: 80px;
+  }
+
+  .wrapper_content {
+    display: flex;
+    align-items: center;
+  }
+
+  .wrapper_img {
+    position: relative;
+    width: 375px;
+    height: 544px;
+
+    margin-right: 9px;
+    overflow: hidden;
+
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .gradient_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+      0deg,
+      rgba(255, 211, 242, 0.7) 0%,
+      rgba(255, 255, 255, 0) 55%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+  .img_olena {
+    max-width: 100%;
+    width: 375px;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: -30px center;
+    z-index: 1;
+    transform: scale(150%);
+  }
+  .olenaName_svg {
+    bottom: 16px;
+  }
+
+  .wrapper_lists {
+    padding: 0;
+    max-width: 342px;
+  }
 }
 @media screen and (min-width: $desktop) {
+  .section {
+    margin-bottom: 120px;
+  }
+  .wrapper_content {
+    position: relative;
+  }
+
+  .wrapper_lists {
+    max-width: 100%;
+  }
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .gradient_overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+      0deg,
+      rgba(255, 211, 242, 0.7) 0%,
+      rgba(255, 255, 255, 0) 55%
+    );
+    pointer-events: none;
+  }
+
+  .list_item {
+    border-radius: 20px;
+    border: 1px solid var(--dark-blue, #6388ad);
+    padding: 0 10px 0 25px;
+    display: flex;
+    align-items: center;
+    min-height: 78px;
+    max-width: 719px;
+    text-indent: 0px;
+    position: relative;
+
+    &::before {
+      content: "\2022";
+      position: absolute;
+      top: 28px;
+      left: 7px;
+    }
+    &::marker {
+      font-size: 11px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .wrapper_img {
+    position: static;
+    min-width: 550px;
+    height: 618px;
+    // min-height: 639px;
+
+    margin-right: 24px;
+    overflow: hidden;
+  }
+
+  .img_olena {
+    max-width: 100%;
+    width: 810px;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+    transform: none;
+  }
+
+  .olenaName_svg {
+    bottom: -63px;
+    left: -70px;
+    mix-blend-mode: normal;
+
+    width: 600px;
+  }
+}
+@media screen and (min-width: $full-hd-desktop) {
+  .wrapper_img {
+    min-width: 810px;
+    position: static;
+  }
+  .wrapper_content {
+    position: relative;
+  }
+  .olenaName_svg {
+    bottom: -46px;
+    left: -111px;
+    mix-blend-mode: normal;
+    width: 913px;
+  }
 }
