@@ -6,6 +6,7 @@ import { ActionTimer } from "./components/SectionActionTimer/ActionTimer";
 import { CoursePricedLow } from "./components/SectionCoursePricedLow/CoursePricedLow";
 import { ExtendedGuarantee } from "./components/SectionExtendedGuarantee/ExtendedGuarantee";
 import { HowTraining } from "./components/SectionHowTraining/HowTraining";
+import { Program } from "./components/SectionProgramm/Program";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <CoursePricedLow />
         <ExtendedGuarantee />
         <HowTraining />
+        <Program />
       </main>
     </>
   );

@@ -1,15 +1,23 @@
 import React from "react";
 
 import s from "./howTraining.module.scss";
-import img from "../../img/olena_course_mob.png";
+import imgMob from "../../img/olena_course_mob.png";
+import imgTab from "../../img/olena_course_tablet.png";
+import { useViewportSizeDetection } from "../../hooks/useViewportSizeDetection";
 
 export const HowTraining = () => {
+  const { viewportSize } = useViewportSizeDetection();
+
   return (
     <section className={s.section}>
       <div className="container">
         <h2 className={s.header}>Як проходить навчання</h2>
         <div className={s.wrapper_content}>
-          <img src={img} alt="Олена" className={s.img_section} />
+          <img
+            src={viewportSize.width < 768 ? imgMob : imgTab}
+            alt="Олена"
+            className={s.img_section}
+          />
           <div className={s.wrapper_text}>
             <div className={s.background}></div>
             <p className={s.text}>
