@@ -16,44 +16,114 @@
 
   z-index: 2;
 }
-.wrapper_content {
-  margin: 0 auto;
-  max-width: 288px;
+
+.list {
 }
-.img_section {
-  left: 0;
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.header_dropdown {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.wrapper_header_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding-bottom: 23px;
+  padding-right: 9.5px;
+  border-bottom: 1px solid $light-black;
+
+  overflow: hidden;
+}
+
+.wrapper_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+.days_step {
   margin-bottom: 8px;
-  margin-left: -16px;
+
+  color: $light-blue-two;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.wrapper_text {
-  position: relative;
+.arrow_down {
+  fill: $arrow-blue;
+
+  width: 24px;
+  height: 24px;
+  transition: all 250ms linear;
 }
 
-.background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.arrow_up {
+  fill: $arrow-blue;
+
+  width: 24px;
+  height: 24px;
+
+  transform: rotate(180deg);
+  transition: all 250ms linear;
+}
+
+.list_text {
+  display: none;
+
   background-color: $light-blue;
 
-  width: 825px;
-  height: 1000px;
-  z-index: 2;
-  transform: translate(-50%, -50.5%) rotate(84deg);
+  width: 100%;
+  height: 100%;
+
+  padding: 12px 0 12px 0;
+
+  border-radius: 0px 0px 20px 20px;
+
+  z-index: -1;
+
+  &.active {
+    display: block;
+  }
 }
 
-.text {
+.item_text {
   position: relative;
-  font-size: 16px;
-  line-height: 24px;
+  display: flex;
 
-  &:nth-child(3) {
-    margin-bottom: 12px;
+  padding-left: 22px;
+  padding-right: 15px;
+
+  align-items: center;
+
+  &::before {
+    content: "\2022";
+    position: absolute;
+    top: 0;
+    left: 11px;
   }
-  &:nth-child(5) {
-    margin-bottom: 12px;
+  &::marker {
+    font-size: 11px;
   }
-  z-index: 3;
+}
+
+.text_dropdown {
+  color: $black;
+  font-size: 16px;
 }
 
 @media screen and (min-width: $tablet) {
@@ -64,38 +134,69 @@
   .header {
     font-size: 28px;
   }
-  .wrapper_content {
-    max-width: 708px;
-  }
-  .img_section {
-    left: 0;
-    margin-bottom: 8px;
-    margin-left: 0;
-  }
 
-  .background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: $light-blue;
-
-    width: 480px;
-    height: 1000px;
-    z-index: 2;
-    transform: translate(-50%, -49.5%) rotate(87deg);
-  }
-
-  .text {
+  .header_dropdown {
     font-size: 18px;
-    line-height: 27px;
+  }
 
-    &:nth-child(3) {
-      margin-bottom: 16px;
+  .wrapper_header_btn {
+    flex-direction: row;
+
+    padding-bottom: 0;
+    padding: 0 32px 0 32px;
+    min-height: 103px;
+
+    border-radius: 50px;
+    border-right: 1px solid $light-black;
+    border-bottom: 1px solid $light-black;
+    border-left: 1px solid $light-black;
+  }
+
+  .wrapper_header {
+    width: 100%;
+  }
+
+  .days_step {
+    margin-bottom: 0;
+    margin-right: 16px;
+
+    color: $light-black;
+
+    font-size: 20px;
+
+    text-wrap: nowrap;
+  }
+
+  .arrow_down {
+    fill: $light-black;
+  }
+
+  .arrow_up {
+    fill: $light-black;
+  }
+
+  .list_text {
+    border-radius: 140px;
+
+    padding: 20px 0 20px 0;
+  }
+
+  .item_text {
+    position: relative;
+    display: flex;
+
+    padding-left: 116px;
+    padding-right: 15px;
+
+    align-items: center;
+
+    &::before {
+      left: 105px;
     }
-    &:nth-child(5) {
-      margin-bottom: 16px;
-    }
-    z-index: 3;
+  }
+
+  .text_dropdown {
+    font-size: 18px;
   }
 }
 
@@ -107,40 +208,40 @@
   .header {
     position: relative;
     font-size: 48px;
-
-    z-index: 3;
   }
+
   .wrapper_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-  }
-  .wrapper_text {
-    max-width: 868px;
-  }
-  .img_section {
-    position: relative;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 24px;
-
-    width: 563px;
-    height: 432px;
-
-    z-index: 3;
+    margin: 0 auto;
+    max-width: 1462px;
   }
 
-  .background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: $light-blue;
+  .wrapper_header_btn {
+    flex-direction: row;
 
-    width: 630px;
-    height: 5000px;
-    z-index: 2;
-    transform: translate(-50%, -51.5%) rotate(80deg);
+    padding-bottom: 0;
+    padding: 40px 50px 41px 100px;
+  }
+
+  .days_step {
+    color: $light-blue-two;
+
+    margin-right: 38px;
+  }
+
+  .arrow_down {
+    fill: $arrow-blue;
+  }
+
+  .arrow_up {
+    fill: $arrow-blue;
+  }
+
+  .item_text {
+    padding-left: 210px;
+
+    &::before {
+      left: 199px;
+    }
   }
 }
 
