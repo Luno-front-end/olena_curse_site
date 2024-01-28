@@ -1,0 +1,90 @@
+@import "../../styles/variables.scss";
+
+.section {
+  padding: 40px 0 0 0;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.wrapper_list {
+  max-width: 288px;
+  margin: 0 auto;
+}
+
+// .list {
+// }
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.question {
+  margin-bottom: 4px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.answer {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: $tablet) {
+  .section {
+    position: relative;
+    padding: 80px 0 0 0;
+  }
+
+  .header {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .wrapper_list {
+    max-width: 708px;
+  }
+
+  .item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .answer {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .section {
+    padding: 100px 0 0 0;
+  }
+
+  .wrapper_list {
+    max-width: 868px;
+  }
+}
+
+@media screen and (min-width: $full-hd-desktop) {
+  .section {
+    padding: 120px 0 0 0;
+  }
+
+  .header {
+    font-size: 48px;
+  }
+}

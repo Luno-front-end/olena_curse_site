@@ -10,10 +10,10 @@
 }
 .QuestionMarkMob {
   position: absolute;
-  top: 0;
+  top: -20px;
   right: 0;
 
-  height: 100%;
+  height: 110%;
   z-index: 0;
 }
 
@@ -31,8 +31,10 @@
   font-size: 20px;
   font-weight: 600;
 }
-// .wrapper_lists {
-// }
+.wrapper_lists {
+  margin: 0 auto;
+  max-width: 288px;
+}
 .first_list {
   margin-bottom: 16px;
 }
@@ -50,16 +52,12 @@
 .text {
   font-size: 16px;
 }
-// .last_list {
-// }
+
 .last_list_item {
   &:not(:last-child) {
     margin-bottom: 16px;
   }
 }
-
-// @media screen and (max-width: ) {
-// }
 
 @media screen and (min-width: $tablet) {
   .section {
@@ -67,12 +65,17 @@
   }
 
   .QuestionMarkMob {
-    top: 0;
+    top: -10px;
     right: 0;
 
     width: 226px;
 
-    height: 100%;
+    height: 110%;
+  }
+
+  .wrapper_lists {
+    margin: 0 auto;
+    max-width: 571px;
   }
 
   .g_header {
@@ -107,10 +110,14 @@
   }
 
   .QuestionMarkMob {
-    top: 0;
+    top: -10px;
     left: -50px;
     width: 100%;
-    height: 100%;
+    height: 110%;
+  }
+  .wrapper_lists {
+    margin: 0;
+    max-width: 100%;
   }
   .g_header {
     margin-bottom: 20px;

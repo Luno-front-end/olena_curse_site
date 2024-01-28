@@ -7,6 +7,9 @@ import { CoursePricedLow } from "./components/SectionCoursePricedLow/CoursePrice
 import { ExtendedGuarantee } from "./components/SectionExtendedGuarantee/ExtendedGuarantee";
 import { HowTraining } from "./components/SectionHowTraining/HowTraining";
 import { Program } from "./components/SectionProgramm/Program";
+import { AuthorCourse } from "./components/SectionAuthorCourse/AuthorCourse";
+import { AnswersToQuestions } from "./components/SectionAnswersToQuestions/AnswersToQuestions";
+import { Reviews } from "./components/SectionReviews/Reviews";
 
 function App() {
   return (
@@ -20,6 +23,11 @@ function App() {
         <ExtendedGuarantee />
         <HowTraining />
         <Program />
+        <ActionTimer />
+        <AuthorCourse />
+        <AnswersToQuestions />
+        <Reviews />
+        <ActionTimer />
       </main>
     </>
   );
