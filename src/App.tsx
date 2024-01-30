@@ -10,6 +10,7 @@ import { Program } from "./components/SectionProgramm/Program";
 import { AuthorCourse } from "./components/SectionAuthorCourse/AuthorCourse";
 import { AnswersToQuestions } from "./components/SectionAnswersToQuestions/AnswersToQuestions";
 import { Reviews } from "./components/SectionReviews/Reviews";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <AnswersToQuestions />
         <Reviews />
         <ActionTimer />
+        <Footer />
       </main>
     </>
   );

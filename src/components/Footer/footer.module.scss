@@ -1,0 +1,304 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-radius: 70px 70px 0 0;
+
+  background-color: $light-blue;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wrapper_content {
+  max-width: 288px;
+  margin: 0 auto;
+}
+
+.contact {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+
+  margin-bottom: 16px;
+
+  &_img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.fop {
+  margin-bottom: 16px;
+
+  &_item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.info {
+  margin-bottom: 20px;
+
+  &_titel {
+    margin-bottom: 8px;
+  }
+
+  &_item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &_link {
+    display: flex;
+  }
+}
+
+.icon_tel {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.icon_mail {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.social {
+  &_titel {
+    margin-bottom: 8px;
+  }
+
+  &_list {
+    display: flex;
+  }
+
+  &_item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.icon_social {
+  width: 24px;
+  height: 24px;
+}
+
+.nav {
+  margin-bottom: 40px;
+
+  font-weight: 400;
+
+  &_list:first-child {
+    margin-bottom: 16px;
+  }
+
+  &_item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.disclaimer {
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  &_text:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.copyright_text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+
+  &:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 16px;
+  }
+}
+
+.copy {
+  &_icon {
+    margin-right: 8px;
+
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &_year {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer {
+    padding-bottom: 20px;
+  }
+
+  .wrapper_content {
+    max-width: 708px;
+  }
+
+  .contact_nav_position {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .contact {
+    margin-top: 0;
+    margin-right: 58px;
+  }
+
+  .logo {
+    display: block;
+
+    margin-bottom: 20px;
+
+    &_img {
+      margin: 0;
+    }
+  }
+
+  .fop {
+    margin-bottom: 40px;
+  }
+
+  .info {
+    margin-bottom: 40px;
+  }
+
+  .social_titel {
+    margin-bottom: 15px;
+  }
+
+  .nav {
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  .disclaimer {
+    margin-bottom: 60px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &_text:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .copyright {
+    &_copy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 8px;
+    }
+
+    &_text {
+      font-size: 16px;
+      line-height: 24px;
+
+      &:nth-child(1) {
+        margin: 0;
+        margin-right: 5px;
+      }
+
+      &:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer {
+    margin-top: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .wrapper_content {
+    max-width: 1620px;
+  }
+
+  .contact_nav_position {
+    margin-top: 0px;
+  }
+
+  .contact {
+    margin-right: 258px;
+  }
+
+  .nav {
+    display: flex;
+
+    &_list:first-child {
+      margin-right: 91px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: $full-hd-desktop) {
+  .wrapper_content {
+    max-width: 1620px;
+  }
+
+  .contact_nav_disclaimer_position {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .contact {
+    margin-right: 138px;
+    margin-bottom: 0;
+
+    font-size: 18px;
+  }
+
+  .nav {
+    display: block;
+    margin-right: 192px;
+    margin-bottom: 0;
+
+    white-space: nowrap;
+
+    &_list:first-child {
+      margin-right: 0;
+    }
+  }
+
+  .disclaimer {
+    margin: 0px;
+
+    font-size: 14px;
+
+    &_text:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
