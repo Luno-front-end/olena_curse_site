@@ -90,37 +90,57 @@ export const Footer = () => {
               <div className={s.nav}>
                 <ul className={s.nav_list}>
                   <li className={s.nav_item}>
-                    <a href="#123">Головна</a>
+                    <a href="#123" className={s.nav_link}>
+                      Головна
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Для кого ?</a>
+                    <a href="#123" className={s.nav_link}>
+                      Для кого ?
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Після курсу</a>
+                    <a href="#123" className={s.nav_link}>
+                      Після курсу
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Ціна</a>
+                    <a href="#123" className={s.nav_link}>
+                      Ціна
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Програма</a>
+                    <a href="#123" className={s.nav_link}>
+                      Програма
+                    </a>
                   </li>
                 </ul>
 
                 <ul className={s.nav_list}>
                   <li className={s.nav_item}>
-                    <a href="#123">Автор</a>
+                    <a href="#123" className={s.nav_link}>
+                      Автор
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Q&A</a>
+                    <a href="#123" className={s.nav_link}>
+                      Q&A
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Відгуки</a>
+                    <a href="#123" className={s.nav_link}>
+                      Відгуки
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Політика конфіденційності</a>
+                    <a href="#123" className={s.nav_link}>
+                      Політика конфіденційності
+                    </a>
                   </li>
                   <li className={s.nav_item}>
-                    <a href="#123">Публічна оферта</a>
+                    <a href="#123" className={s.nav_link}>
+                      Публічна оферта
+                    </a>
                   </li>
                 </ul>
               </div>

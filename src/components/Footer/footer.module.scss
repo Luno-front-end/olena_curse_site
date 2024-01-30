@@ -106,6 +106,10 @@
   &_item:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  &_link {
+    text-decoration: underline;
+  }
 }
 
 .disclaimer {
